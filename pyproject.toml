@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = " braillebaseoutput"
-version = "0.1.5"
+version = "0.1.6"
 description = "A complete and extensible Unicode Braille processing library."
 authors = [
     { name = "Nagao Yuji" }
