@@ -1,0 +1,2 @@
+This module offloads the heavy output logic from the main braillebase module.
+It must be used together with the brailletable methods and the braillebase confidence_test function, which provides the validated braille mapping.
