@@ -132,7 +132,7 @@ class BrailleBaseOutput():
 
             rough_xml = ET.tostring(root, encoding="utf-8")
             reparsed = minidom.parseString(rough_xml)
-            return reparsed.toprettyxml(indent="    ", encoding="utf-8").decode("utf-8")
+        return reparsed.toprettyxml(indent="    ", encoding="utf-8").decode("utf-8")
         
     #0005-D
     def output_all_yaml(self, brailles_map: dict) -> str:
@@ -163,7 +163,7 @@ class BrailleBaseOutput():
                 lines.append(f"  ReverseUnicode: \"{"U+" + self.__UnicodeList[self.__BrailleList.index(self.__ReverseBrailleList[idx])]}\"")
                 lines.append("")
 
-            return "\n".join(lines)
+        return "\n".join(lines)
 
     #0005-E
     def output_all_markdown(self, brailles_map: dict, braille: list, reverse_braille: list, text: str, footer = "Thank you for using Braille Base.") -> str:
@@ -289,11 +289,11 @@ class BrailleBaseOutput():
         """
         lines = []
 
-        lines.append("## Character -> Braille")
+        lines.append("Character -> Braille")
         lines.append("")
-        lines.append(f"### Text: {text}")
-        lines.append(f"### Braille: {braille}")
-        lines.append(f"### Reverse Braille: {reverse_braille}")
+        lines.append(f"Text: {text}")
+        lines.append(f"Braille: {braille}")
+        lines.append(f"Reverse Braille: {reverse_braille}")
         lines.append("")
         for key, braille_list in brailles_map.items():
 
